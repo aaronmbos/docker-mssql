@@ -6,3 +6,4 @@
 5. Copy backup files into backups directory
   docker cp AdventureWorks2019.bak e622d1df5d19:/var/opt/mssql/backups/
 6. In Azure Data Studio, Use Restore feature to create database
+** Updated to use Dockerfile to include Full text search
