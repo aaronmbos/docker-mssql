@@ -1,0 +1,8 @@
+1. Create docker-compose.yml (include backups volume)
+2. Run docker-compose up -d to start pull image and start container
+3. Download bak files for databases
+4. Create backups directory inside of container
+  docker exec -it e622d1df5d19 mkdir /var/opt/mssql/backups
+5. Copy backup files into backups directory
+  docker cp AdventureWorks2019.bak e622d1df5d19:/var/opt/mssql/backups/
+6. In Azure Data Studio, Use Restore feature to create database

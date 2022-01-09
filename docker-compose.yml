@@ -1,0 +1,15 @@
+version: "3.4"
+services:
+  db:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 1434:1433
+    environment:
+      ACCEPT_EULA: Y
+      SA_PASSWORD: ${SA_PASSWORD}
+    volumes:
+      - data:/var/opt/mssql
+volumes:
+  data:
