@@ -1,2 +1,3 @@
 .env
+# .bak files are too big
 *.bak
